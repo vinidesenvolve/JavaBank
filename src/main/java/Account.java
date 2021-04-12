@@ -29,4 +29,12 @@ public class Account {
         System.out.println("Account balance = " + balance);
     }
 
+    void toPrintAccountData(){
+        System.out.print("Name: " + name + "\n" +
+                "Account: " + number + "\n" +
+                "Agency: " + agency + "\n" +
+                "Balance: " + balance + "\n" +
+                "Opened since: " + openingDate
+        );
+    }
 }
