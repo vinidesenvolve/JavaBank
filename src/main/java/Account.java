@@ -7,10 +7,6 @@ public class Account {
     double balance;
     LocalDate openingDate;
 
-    void toPrintBalance(){
-        System.out.println("Account balance = " + balance);
-    }
-
     void toWithdraw(double quantity){
         if(quantity <= 0 || quantity > balance)
             System.out.println("Quantity NOT permited");
@@ -28,4 +24,9 @@ public class Account {
     void monthIncome(){
         System.out.println("Monthly income = " + balance*0.1);
     }
+
+    void printBalance(){
+        System.out.println("Account balance = " + balance);
+    }
+
 }

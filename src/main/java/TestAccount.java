@@ -13,11 +13,11 @@ public class TestAccount {
         System.out.println(account.openingDate);
         System.out.println(account.number);
 
-        account.toPrintBalance(); //100
+        account.printBalance(); //100
         account.toDeposit(100);
-        account.toPrintBalance(); //200
+        account.printBalance(); //200
         account.toWithdraw(201);
-        account.toPrintBalance(); //150
+        account.printBalance(); //150
         account.monthIncome(); //10%
     }
 }
