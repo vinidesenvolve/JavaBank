@@ -5,7 +5,7 @@ public class Account {
     int number;
     String agency;
     double balance;
-    LocalDate openingDate;
+    Date openingDate = new Date();
 
     void toWithdraw(double quantity){
         if(quantity <= 0 || quantity > balance)
@@ -29,12 +29,12 @@ public class Account {
         System.out.println("Account balance = " + balance);
     }
 
-    void toPrintAccountData(){
-        System.out.print("Name: " + name + "\n" +
+    String toPrintAccountData(){
+        String data = "Name: " + this.name + "\n" +
                 "Account: " + number + "\n" +
                 "Agency: " + agency + "\n" +
                 "Balance: " + balance + "\n" +
-                "Opened since: " + openingDate
-        );
+                "Opened since: " + openingDate.formatDate();
+        return data;
     }
 }
